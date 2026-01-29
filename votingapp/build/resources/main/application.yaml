@@ -1,0 +1,34 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/voting_app
+    username: voting_app_admin
+    password: fcoNFEWFdnwueFNEUFW
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+    show-sql: true
+    format-sql: true
+
+jwt:
+  secret: mysecretkey1234567890ABCDEF123456UFFWENFWEIslpadqlpwdEFkcwqlpkwpv42151
+
+logging:
+  level:
+    root: INFO
+    com.votingapp.votingapp: DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
+    org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: TRACE
+    org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor: DEBUG
+  file:
+    name: application.log

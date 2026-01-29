@@ -1,0 +1,10 @@
+services:
+  voting-service:
+    build: ./votingapp
+    ports:
+      - "8081:8080"
+
+  face-scan-service:
+    build: ./faceapp
+    depends_on:
+      - voting-service
